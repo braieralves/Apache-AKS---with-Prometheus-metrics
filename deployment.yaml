@@ -1,14 +1,13 @@
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: apache-index
-  namespace: apache-with-metrics
+  namespace: apache
 data:
   index.html: |
     <html>
       <head>
-        <title>Apache AKS is running</title>
+        <title>Apache Kubern8t is running</title>
         <style>
           body {
             display: flex;
@@ -29,7 +28,7 @@ data:
       </head>
       <body>
 
-        <h1>Apache AKS is running</h1>
+        <h1>Apache Kubern8t is running</h1>
 
         <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2019/03/Dumb-Dumber-Quotes-Austria.jpg" target="_blank">
           <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2019/03/Dumb-Dumber-Quotes-Austria.jpg" alt="Apache Image">
@@ -42,7 +41,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: apache-status-config
-  namespace: apache-with-metrics
+  namespace: apache
 data:
   httpd-status.conf: |
     LoadModule status_module modules/mod_status.so
@@ -57,7 +56,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: apache-main-override
-  namespace: apache-with-metrics
+  namespace: apache
 data:
   httpd.conf: |
     # Include the original Apache config
@@ -70,7 +69,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: apache
-  namespace: apache-with-metrics
+  namespace: apache
   labels:
     app: apache
 spec:
@@ -124,7 +123,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: apache
-  namespace: apache-with-metrics
+  namespace: apache
   labels:
     app: apache
 spec:
