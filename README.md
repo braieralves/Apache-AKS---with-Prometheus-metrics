@@ -1,1 +1,1 @@
-Depolument Apache kubernets + Prometheus metrics exposed
+Create Apache on Kubernetes + Prometheus metrics exposed
