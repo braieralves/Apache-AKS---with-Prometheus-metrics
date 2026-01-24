@@ -128,6 +128,7 @@ metadata:
   labels:
     app: apache
 spec:
+  type: LoadBalancer
   selector:
     app: apache
   ports:
