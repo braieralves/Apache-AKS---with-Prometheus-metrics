@@ -7,7 +7,7 @@ data:
   index.html: |
     <html>
       <head>
-        <title>Apache Kubern8t is running</title>
+        <title>Apache Kubern8s is running</title>
         <style>
           body {
             display: flex;
