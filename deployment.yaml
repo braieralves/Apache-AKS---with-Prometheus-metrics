@@ -93,7 +93,7 @@ spec:
     spec:
       containers:
         - name: apache
-          image: httpd:2.4
+          image: httpd:latest
           ports:
             - containerPort: 80
           volumeMounts:
